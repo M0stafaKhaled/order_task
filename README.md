@@ -12,6 +12,11 @@ First, create a `.env` file by copying the `.env.example`. You can use the follo
 ```bash
 cp .env.example .env
 ```
+Next, you must install all dependencies by running this command:
+
+```bash
+composer install
+```
 
 ### Step 2: Database Configuration
 
