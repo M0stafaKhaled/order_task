@@ -33,10 +33,26 @@ php artisan app:install
 
 After executing this command, the application should be installed successfully.
 
+
+### Step 4: Run Test 
+
+```bash
+php artisan test
+```
+
+
+
+
 ## API Documentation
 
 For easy use of the API, we have prepared a Postman collection. You can import this collection into your Postman application to explore the API endpoints.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/crimson-astronaut-614147/workspace/order-demo/collection/your-collection-id?action=share&creator=5909341)
+
+
+
+### For Remaining Tasks
+
+You can find the remaining tasks in the `OtherTasks` folder.
 
 
