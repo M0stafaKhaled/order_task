@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Requests\Api;
-
-
+namespace App\Http\Requests;
 
 use App\Http\Requests\helper\APIRequest;
+use App\Models\Product;
+use Illuminate\Foundation\Http\FormRequest;
 
-class AuthApiRequest extends APIRequest
+class CreateProductApiRequest extends APIRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,6 @@ class AuthApiRequest extends APIRequest
      */
     public function rules()
     {
-        return [
-            'email' => 'required|string|email|',
-            'password' => 'required|string',
-        ];
+        return Product::$rules;
     }
 }

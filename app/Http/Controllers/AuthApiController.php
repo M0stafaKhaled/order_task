@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class AuthApiController extends Controller
 {
     use ResponseTrait;
-    public function __invoke(AuthApiRequest $request)
+    public function login(AuthApiRequest $request)
     {
         $credentials = $request->only('email', 'password');
 
@@ -20,6 +20,15 @@ class AuthApiController extends Controller
         }
 
         return $this->respondWithToken($token);
+    }
+
+    public function logout()
+    {
+        Auth::guard('api')->logout();
+
+        return $this->makeResponse(
+            []
+            , 'User logged out successfully', 200);
     }
 
     private function respondWithToken($token): \Illuminate\Http\JsonResponse

@@ -13,7 +13,10 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            'App\Repositories\Api\interfaces\ProductApiInterface',
+            'App\Repositories\Api\ProductApiRepository'
+        );
     }
 
     /**
